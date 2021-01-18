@@ -7,11 +7,30 @@ if [[ -f ".bashrc" ]]; then
 	echo "Saving old ~/.bashrc file in ~/.bashrc.back"
 	mv .bashrc .bashrc.back
 fi
-ln -s ~/workspace/dot-files/bashrc .bashrc
+ln -sf ~/workspace/dot-files/bashrc .bashrc
 source .bashrc
 
 if [[ -f ".gitconfig" ]]; then
 	echo "Saving old ~/.gitconfig file in ~/.gitconfig.back"
 	mv .gitconfig .gitconfig.back
 fi
-ln -s ~/workspace/dot-files/gitconfig .gitconfig
+ln -sf ~/workspace/dot-files/gitconfig .gitconfig
+
+which nvim &> /dev/null
+if [[ $? -ne 0 ]]; then
+	echo "Getting neovim"
+	sudo dnf install neovim python3-neovim
+	echo "Installed neovim version $(nvim --version | head -n 1)"
+fi
+
+echo "Setting up neovim"
+if [[ ! -d "~/.config/nvim" ]]; then
+	mkdir -p ~/.config/nvim	
+fi
+ln -sf ~/workspace/dot-files/vimrc ~/.config/nvim/init.vim
+
+echo "Installing Plug for neovim"
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+echo "Run :PlugInstall the next time you open neovim"
+echo "All done..."
