@@ -19,6 +19,7 @@ export PATH
 alias la="ls -al"
 alias ..="cd .."
 alias ww="cd workspace && ls"
+alias c="clear"
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
