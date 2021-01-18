@@ -21,7 +21,7 @@ set path+=**
 
 set wildmenu
 
-call plug#begine("~/.config/nvim/plugged")
+call plug#begin("~/.config/nvim/plugged")
   Plug 'ayu-theme/ayu-vim'
   Plug 'pangloss/vim-javascript'
   Plug 'maxmellon/vim-jsx-pretty'
@@ -31,5 +31,5 @@ call plug#begine("~/.config/nvim/plugged")
 call plug#end()
 
 set termguicolors
-let ayucolor="black"
+let ayucolor="dark"
 colorscheme ayu
