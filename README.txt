@@ -1,6 +1,6 @@
-=============
+============
 My dot files
-=============
+============
 Here are my dot files
   - bashrc
   - vimrc

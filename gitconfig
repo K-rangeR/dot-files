@@ -3,3 +3,5 @@
 	co = checkout
 	br = branch
 	ci = commit
+[user]
+	email = zranger2345@gmail.com
