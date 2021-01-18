@@ -28,6 +28,8 @@ call plug#begin("~/.config/nvim/plugged")
 
   Plug 'itchyny/lightline.vim'
   set laststatus=2
+
+  Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 set termguicolors
