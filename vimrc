@@ -30,6 +30,7 @@ call plug#begin("~/.config/nvim/plugged")
   set laststatus=2
 
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'preservim/nerdtree'
 call plug#end()
 
 set termguicolors
