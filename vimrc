@@ -1,4 +1,4 @@
-set number
+set nu rnu
 set numberwidth=2
 
 syntax on
