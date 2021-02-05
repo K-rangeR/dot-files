@@ -42,7 +42,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
     \ quit | endif
 
 " Open NERDTree
-map <C-m> :NERDTreeToggle<CR>
+map <C-m> :NERDTree<CR>
 
 " Uncomment the following to have Vim jump to the last position when                                                       
 " reopening a file
