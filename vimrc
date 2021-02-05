@@ -41,6 +41,9 @@ colorscheme ayu
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
 
+" Open NERDTree
+map <C-m> :NERDTreeToggle<CR>
+
 " Uncomment the following to have Vim jump to the last position when                                                       
 " reopening a file
 if has("autocmd")
