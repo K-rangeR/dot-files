@@ -22,6 +22,7 @@ alias ww="cd workspace && ls"
 alias c="clear"
 alias vim="nvim"
 alias vi="nvim"
+alias open="xdg-open"
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
