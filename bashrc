@@ -22,13 +22,29 @@ if [ $os = "Darwin" ]; then
 fi
 
 # User specific aliases and functions
+alias sl="ls"
+alias py3="python3"
 alias la="ls -al"
 alias ..="cd .."
 alias ww="cd workspace && ls"
 alias c="clear"
-alias vim="nvim"
-alias vi="nvim"
-alias open="xdg-open"
+alias td="todoro"
+alias g++7="g++ -std=c++17 -Wall -Werror"
+alias g++1="g++ -std=c++11 -Wall -Werror"
+
+if [ $os = "Linux" ]; then
+  alias open="xdg-open"
+
+  # Linux uses neovim
+  alias vim="nvim"
+  alias vi="nvim"
+fi
+
+export EDITOR=vim
+if [ $os = "Darwin" ]; then
+  export MYVIMRC="~/.vim/.vimrc"
+  export VIMINIT="source $MYVIMRC"
+fi
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
