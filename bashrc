@@ -12,8 +12,14 @@ then
 fi
 export PATH
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
+os=$(uname)
+
+# On Mac
+if [ $os = "Darwin" ]; then
+  export GOPATH=/Users/kranger/workspace/go_workspace
+  export JAVA_HOME=$(/usr/libexec/java_home)
+  export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+fi
 
 # User specific aliases and functions
 alias la="ls -al"
