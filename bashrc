@@ -51,3 +51,5 @@ parse_git_branch() {
 }
 
 PS1="(\[\e[1;32m\u\e[m\] \[\e[1;31m\W\e[m\])\[\e[1;36m\$(parse_git_branch)\e[m\] λ "
+
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
