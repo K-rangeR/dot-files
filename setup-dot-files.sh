@@ -16,6 +16,12 @@ if [[ -f ".gitconfig" ]]; then
 fi
 ln -sf ~/workspace/dot-files/gitconfig .gitconfig
 
+if [[ -f ".tmux.conf" ]]; then
+	echo "Saving old ~/.tmux.fong file in ~/.tmux.conf.back"
+  mv .tmux.conf .tmux.conf.back
+fi
+ln -sf ~/workspace/dot-files/tmux.conf .tmux.conf
+
 which nvim &> /dev/null
 if [[ $? -ne 0 ]]; then
 	echo "Getting neovim"
