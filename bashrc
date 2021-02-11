@@ -12,6 +12,10 @@ then
 fi
 export PATH
 
+# Bring the power of vim to bash
+# Prese ESC or Ctrl+[ at the prompt to enter Normal mode
+set -o vi
+
 # User specific aliases and functions
 alias sl="ls"
 alias py3="python3"
