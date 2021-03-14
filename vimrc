@@ -23,8 +23,8 @@ set wildmenu
 
 call plug#begin("~/.config/nvim/plugged")
   Plug 'ayu-theme/ayu-vim'
-  Plug 'pangloss/vim-javascript'
   Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'flazz/vim-colorschemes'
 
   Plug 'itchyny/lightline.vim'
   set laststatus=2
@@ -32,9 +32,11 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
-set termguicolors
-let ayucolor="dark"
-colorscheme ayu
+colorscheme peachpuff
+highlight Comment ctermfg=4
+highlight LineNr ctermfg=3
+highlight CursorLineNr ctermfg=3
+highlight Visual cterm=bold ctermbg=grey ctermfg=NONE
 
 " Uncomment the following to have Vim jump to the last position when                                                       
 " reopening a file
